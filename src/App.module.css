@@ -7,4 +7,34 @@
   grid-template-columns: 256px 1fr;
   gap: 2rem;
   align-items: flex-start;
+  margin-top: 5rem;
+}
+
+.wrapper aside {
+  position: fixed;
+}
+
+.wrapper main {
+  margin-left: 290px;
+  width: calc(100vh - 256px);
+}
+
+
+
+@media (max-width: 768px) {
+
+  html{
+    font-size: 87.5%;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+   .wrapper aside {
+        position: static; /* Desabilita o position: fixed; */
+    }
+    .wrapper main {
+        margin-left: 0; /* Remove a margem esquerda */
+        width: auto;    /* Define a largura para o valor padrão */
+    }
 }
